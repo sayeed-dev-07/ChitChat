@@ -109,6 +109,20 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
+    overflow-y: auto;
+}
+
+.form-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3;
+    border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
 }
 
 .back-link {
@@ -209,4 +223,100 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.details a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+
+/* --- Details Page Styles --- */
+.details-card {
+    background: #f7f7f7;
+    padding: 24px;
+    border: 2px dotted #0e0a0a;
+    border-radius: 12px;
+    margin-top: 10px;
+
+}
+
+.detail-group {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 16px;
+}
+
+/* Remove the border from the last item to keep it clean */
+.detail-group:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detail-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #737373;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    color: #000000;
+}
+
+.detail-value.user-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.detail-value.time-stamp {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* Gives the actual message a distinct white box to stand out */
+.detail-value.message-highlight {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: #ffffff;
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.messageDetails {
+    min-height: 100px;
+    overflow-y: auto;
+    word-break: break-all;
+    max-height: 200px;
+}
+
+.messageDetails::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messageDetails::-webkit-scrollbar-thumb {
+    background-color: #a3a3a3;
+    border-radius: 10px;
+}
+
+.messageDetails::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
 }

@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { messages } = require('./indexRouter')
+const { messages } = require("./indexRouter")
 
 const newRouter = Router()
 
@@ -9,7 +9,8 @@ newRouter.get('/new', (req, res) => {
 newRouter.post('/new', (req, res) => {
     const authorName = req.body.authorName;
     const message = req.body.inputMessage;
-    messages.push({ user: authorName, text: message, added: new Date() })
+    const postId = messages.length
+    messages.push({ id: postId, user: authorName, text: message, added: new Date() })
     res.redirect("/")
 })
 

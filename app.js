@@ -1,6 +1,7 @@
 const express = require('express');
 const { indexRouter } = require('./routes/indexRouter')
 const { newRouter } = require('./routes/newRouter')
+const { detailsRouter } = require('./routes/detailsRouter')
 const path = require("node:path");
 
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', indexRouter)
 app.use('/', newRouter)
+app.use('/', detailsRouter)
 
 app.get('/{*splat}', (req, res) => {
     res.send('404 page')

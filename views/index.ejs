@@ -34,6 +34,9 @@
                     <p class="message-text">
                         <%= messages[i].text %>
                     </p>
+                    <div class="details">
+                        <a href="<%= messages[i].id %>/details">details</a>
+                    </div>
                 </div>
                 <% } %>
 
@@ -41,13 +44,12 @@
                         <a href="/new" class="btn">Write a Message</a>
                     </div>
         </main>
-        
+
 
     </div>
     <div class="credits">
-            Developed by <a href="https://github.com/sayeed-dev-07" target="_blank">Sayeed</a>
-        </div>
-
+        Developed by <a href="https://github.com/sayeed-dev-07" target="_blank">Sayeed</a>
+    </div>
 
 </body>
 
