@@ -1,21 +1,11 @@
 const express = require('express');
-
+const { indexRouter } = require('./routes/indexRouter')
+const { newRouter } = require('./routes/newRouter')
 const path = require("node:path");
 
 
 
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date()
-    }
-];
+
 
 const app = express()
 const PORT = 3003
@@ -26,10 +16,10 @@ app.set("view engine", "ejs");
 
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.render('index', { messages })
-})
+app.use('/', indexRouter)
+app.use('/', newRouter)
 
 app.get('/{*splat}', (req, res) => {
     res.send('404 page')
