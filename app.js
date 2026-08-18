@@ -3,8 +3,7 @@ const { indexRouter } = require('./routes/indexRouter')
 const { newRouter } = require('./routes/newRouter')
 const { detailsRouter } = require('./routes/detailsRouter')
 const path = require("node:path");
-
-
+require('dotenv').config()
 
 
 

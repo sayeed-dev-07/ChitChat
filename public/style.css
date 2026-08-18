@@ -204,6 +204,8 @@ body {
 .new-message-wrapper {
     margin-top: auto;
     padding-top: 16px;
+    position: sticky;
+    bottom: 0;
 }
 
 .credits {
@@ -289,7 +291,7 @@ body {
     color: #555555;
 }
 
-/* Gives the actual message a distinct white box to stand out */
+
 .detail-value.message-highlight {
     font-size: 1.2rem;
     line-height: 1.6;
